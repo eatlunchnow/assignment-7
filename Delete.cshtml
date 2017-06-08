@@ -1,0 +1,56 @@
+﻿@model MVCAssignment.Models.GrantType
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>GrantType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GrantTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrantTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrantTypeMaximum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrantTypeMaximum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrantTypeLifetimeMaximum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrantTypeLifetimeMaximum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrantTypeDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrantTypeDescription)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
